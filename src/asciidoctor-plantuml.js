@@ -143,7 +143,7 @@ const antoraAdapter = (file, contentCatalog) => ({
   add: (image) => {
     const { component, version, module } = file.src
     contentCatalog.addFile({
-      contents: Buffer.from(image.contents, 'binary'),
+      contents: image.contents,
       src: {
         component,
         version,
